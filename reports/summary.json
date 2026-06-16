@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "version": "Agent_V2_Optimized",
+    "total": 50,
+    "timestamp": "2026-06-16 15:39:56",
+    "judges": [
+      "gpt-4o",
+      "claude-3-5-sonnet"
+    ],
+    "wall_time_sec": 0.24
+  },
+  "metrics": {
+    "avg_score": 4.1,
+    "pass_rate": 0.84,
+    "hit_rate": 1.0,
+    "mrr": 0.917,
+    "agreement_rate": 0.98,
+    "cohens_kappa": 0.473,
+    "avg_faithfulness": 0.865,
+    "avg_relevancy": 0.574,
+    "avg_latency": 0.0446,
+    "conflicts_resolved": 1
+  },
+  "cost": {
+    "total_cost_usd": 0.06204,
+    "total_tokens": 9597,
+    "cost_per_eval_usd": 0.001241
+  },
+  "regression": {
+    "baseline": "Agent_V1_Base",
+    "candidate": "Agent_V2_Optimized",
+    "v1_metrics": {
+      "avg_score": 3.04,
+      "pass_rate": 0.52,
+      "hit_rate": 0.978,
+      "mrr": 0.953,
+      "agreement_rate": 1.0,
+      "cohens_kappa": 0.389,
+      "avg_faithfulness": 0.7,
+      "avg_relevancy": 0.5,
+      "avg_latency": 0.0645,
+      "conflicts_resolved": 0
+    },
+    "v2_metrics": {
+      "avg_score": 4.1,
+      "pass_rate": 0.84,
+      "hit_rate": 1.0,
+      "mrr": 0.917,
+      "agreement_rate": 0.98,
+      "cohens_kappa": 0.473,
+      "avg_faithfulness": 0.865,
+      "avg_relevancy": 0.574,
+      "avg_latency": 0.0446,
+      "conflicts_resolved": 1
+    },
+    "gate": {
+      "decision": "APPROVE",
+      "delta_avg_score": 1.06,
+      "cost_change_pct": 1.06,
+      "checks": {
+        "no_quality_regression": true,
+        "avg_score_above_min": true,
+        "hit_rate_above_min": true,
+        "agreement_above_min": true,
+        "latency_ok": true,
+        "cost_not_regressed": true
+      },
+      "thresholds": {
+        "min_avg_score": 3.5,
+        "min_hit_rate": 0.8,
+        "min_agreement_rate": 0.7,
+        "max_avg_latency": 2.0,
+        "max_cost_regression": 0.1
+      }
+    }
+  },
+  "failure_clusters": {
+    "counts": {
+      "Answer Quality (thiếu/sai nội dung)": 8
+    },
+    "examples": {
+      "Answer Quality (thiếu/sai nội dung)": "Nếu mất thiết bị 2FA thì khôi phục tài khoản bằng cách nào?"
+    }
+  }
+}

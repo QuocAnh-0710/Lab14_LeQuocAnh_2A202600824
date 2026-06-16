@@ -2,5 +2,8 @@
 __pycache__/
 *.pyc
 .DS_Store
-reports/
 data/golden_set.jsonl
+
+# Lưu ý: reports/ là DELIVERABLE bắt buộc (summary.json, benchmark_results.json)
+# nên KHÔNG ignore. Chỉ bỏ qua file phụ trợ V1 nếu muốn:
+# reports/benchmark_results_v1.json
